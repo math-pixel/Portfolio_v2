@@ -7,9 +7,9 @@ interface Props {
 const { href, title } = Astro.props;
 ---
 
-<ul>
+<ul class=" bg-slate-50 flex justify-around">
 	{title.map((item, index) => (
-        <a href={href[index]}>{item}</a>
+        <a href={href[index]} class="  m-4 ">{item}</a>
     ))}
 </ul>
 
