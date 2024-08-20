@@ -6,8 +6,8 @@ import Card from '../components/Card.astro';
 
 const cards = [
 	{ title: "3D Printer", body: "yay" ,href: "" },
-	{ title: "2D Printer", body: "yey" ,href: "" },
-	{ title: "1D Printer", body: "null" ,href: "" }
+	// { title: "2D Printer", body: "yey" ,href: "" },
+	// { title: "1D Printer", body: "null" ,href: "" }
 ]
 
 ---
@@ -17,23 +17,23 @@ const cards = [
     
 	<div id="home" class=" ">
 
-		<h1>Mathieu Chavanel</h1>
-		<h2>Creatif Developpeur</h2>
-		<img src="" alt="">
-		<Button title='Projets' href='/projets'></Button>
-		<Button title='Contact' href='/#contact'></Button>
-		<a href="">Découvrir</a>
+		<div>
+			<div>
+				<h1>Mathieu Chavanel</h1>
+				<h2>Developpeur Creatif</h2>
+				<p>Description</p>
+			</div>
+			<img src="" alt="">
+		</div>
+
+		<a href="">arrow</a>
 
 	</div>
 
 	<div id="projectHighlight">
 		{cards.map((currentCard) => (
-			<Card title={currentCard.title} body={currentCard.body} href={currentCard.href}></Card>
+			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail=''></Card>
 		))}
-	</div>
-	
-	<div id="labs">
-
 	</div>
 	
 	<div id="contact">
