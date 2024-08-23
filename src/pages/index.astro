@@ -5,7 +5,7 @@ import Button from '../components/Button.astro';
 import Card from '../components/Card.astro';
 
 const cards = [
-	{ title: "3D Printer", body: "yay" ,href: "" },
+	{ title: "3D Printer", body: "yay" ,href: "", techno: [{img : "path"}]},
 	// { title: "2D Printer", body: "yey" ,href: "" },
 	// { title: "1D Printer", body: "null" ,href: "" }
 ]
@@ -32,7 +32,7 @@ const cards = [
 
 	<div id="projectHighlight">
 		{cards.map((currentCard) => (
-			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail=''></Card>
+			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail='' techno={currentCard.techno}></Card>
 		))}
 	</div>
 	

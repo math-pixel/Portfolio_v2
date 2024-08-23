@@ -4,13 +4,21 @@ interface Props {
 	description: string;
 	href: string;
 	thumbnail: string;
+	techno : [];
 }
 
-const { href, title, description, thumbnail } = Astro.props;
+const { href, title, description, thumbnail, techno } = Astro.props;
 ---
 
 <a href={href}>
 	<img src={thumbnail} alt="">
 	<h2>{title}</h2>
 	<p>{description}</p>
+	<ul>
+		{techno.map((element) => {
+			<li>
+				<img src={element.img} />
+			</li>
+		})}
+	</ul>
 </a >
