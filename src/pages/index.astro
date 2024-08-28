@@ -1,5 +1,7 @@
 ---
 import LayoutPage from '../layouts/page.astro';
+import LayoutProject from '../layouts/projectLayout.astro';
+
 import Header from '../components/header.astro';
 import Button from '../components/Button.astro';
 import Card from '../components/Card.svelte';
@@ -14,11 +16,11 @@ const cards = [
 	// { title: "2D Printer", body: "yey" ,href: "" },
 	// { title: "1D Printer", body: "null" ,href: "" }
 ]
-import * as myPost from 'content/projets/3d printer.mdx';
+import * as myPost from '../content/projects/3d printer.mdx';
 ---
 
-<LayoutPage title="Mathieu Chavanel.B - Potfolio">
-	<Header title={["Accueil", "Projets", "Labs", "Contact"]} href={["/", "/projets", "/#labs", "/#contact"]}></Header>
+<LayoutPage title="test">
+	<!-- <Header title={["Accueil", "Projets", "Labs", "Contact"]} href={["/", "/projets", "/#labs", "/#contact"]}></Header>
 	<div id="home" class=" ">
 
 		<div>
@@ -39,9 +41,9 @@ import * as myPost from 'content/projets/3d printer.mdx';
 			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail='' techno={currentCard.techno}></Card>
 		))}
 	</div>
-	
+	 -->
 	<div id="contact">
-
+		<LayoutProject frontmatter={myPost.frontmatter} ></LayoutProject>
 	</div>
 
 </LayoutPage>

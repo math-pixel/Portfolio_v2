@@ -1,0 +1,13 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+
+<div>
+    <!-- ... -->
+    <h1>test</h1>
+    <p>{frontmatter.description}</p>
+    <slot /> <!-- Markdown content is injected here -->
+    <!-- ... -->
+</div>
+
