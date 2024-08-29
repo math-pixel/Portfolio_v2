@@ -10,10 +10,11 @@ const projectCollection = defineCollection({
    // also it will check every newly created frontmatter in the content/blog directory
     z.object({
       title: z.string(),
-      tags: z.array(z.string()),
+      description: z.array(z.string()),
       cover: image(),
       date: z.coerce.date(),
-      excerpt: z.string(),
+      thumbnail: z.string(),
+      techno : z.array(z.string())
     }),
 });
  

@@ -16,11 +16,10 @@ const cards = [
 	// { title: "2D Printer", body: "yey" ,href: "" },
 	// { title: "1D Printer", body: "null" ,href: "" }
 ]
-import * as myPost from '../content/projects/3d printer.mdx';
 ---
 
 <LayoutPage title="test">
-	<!-- <Header title={["Accueil", "Projets", "Labs", "Contact"]} href={["/", "/projets", "/#labs", "/#contact"]}></Header>
+	<Header title={["Accueil", "Projets", "Labs", "Contact"]} href={["/", "/projets", "/#labs", "/#contact"]}></Header>
 	<div id="home" class=" ">
 
 		<div>
@@ -41,9 +40,8 @@ import * as myPost from '../content/projects/3d printer.mdx';
 			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail='' techno={currentCard.techno}></Card>
 		))}
 	</div>
-	 -->
+	
 	<div id="contact">
-		<LayoutProject frontmatter={myPost.frontmatter} ></LayoutProject>
 	</div>
 
 </LayoutPage>
