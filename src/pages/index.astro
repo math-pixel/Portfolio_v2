@@ -46,8 +46,23 @@ const cards = [
 
 </LayoutPage>
 
-<style>
+<style is:global>
 	@view-transition {
 	  navigation: auto; /* enabled! */
 	}
+
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	@layer components {
+		.typo-rubik {
+			font-family: 'Rubik', "Regular";
+		}
+		.global-color{
+			background-color: #CFE9FF;
+		}
+
+	}
+
 </style>
