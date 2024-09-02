@@ -7,7 +7,7 @@ interface Props {
 const { href, title } = Astro.props;
 ---
 
-<ul class=" absolute inset-x-0 top-0 global-color flex justify-around w-1/4 rounded-3xl mx-auto my-5 typo-rubik font-semibold text-xl">
+<ul class=" absolute inset-x-0 top-0 global-color flex justify-around w-1/4 rounded-full mx-auto my-5 font-semibold text-2xl">
 	{title.map((item, index) => (
         <a href={href[index]} class="  m-4">{item}</a>
     ))}

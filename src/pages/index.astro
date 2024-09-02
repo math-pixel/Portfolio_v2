@@ -19,17 +19,15 @@ const cards = [
 ---
 
 <LayoutPage title="test">
-	<Header title={["Accueil", "Projets", "Labs", "Contact"]} href={["/", "/projets", "/#labs", "/#contact"]}></Header>
-	<div id="home" class=" ">
+	<Header title={["Accueil", "Projets", "Contact"]} href={["/", "/projets", "/#contact"]}></Header>
+	<div id="home" class=" flex w-screen h-screen">
 
-		<div>
-			<div>
-				<h1>Mathieu Chavanel</h1>
-				<h2>Developpeur Creatif</h2>
-				<p>Description</p>
-			</div>
-			<img src="" alt="">
+		<div class="  absolute left-[10%] top-[10%]">
+			<h1 class="text-7xl font-medium h-auto w-auto">Mathieu Chavanel</h1>
+			<h2 class="text-5xl">Developpeur Creatif</h2>
+			<p class="text-xl">Description</p>
 		</div>
+		<img src="/images/profile.png" alt="image profile" class=" w-[30%] h-auto absolute right-[10%] top-[10%]">
 
 		<a href="">arrow</a>
 
@@ -57,12 +55,16 @@ const cards = [
 
 	@layer components {
 		.typo-rubik {
-			font-family: 'Rubik', "Regular";
+			font-family: 'Rubik';
 		}
 		.global-color{
 			background-color: #CFE9FF;
 		}
 
+	}
+
+	*{
+		overflow-x: hidden;
 	}
 
 </style>
