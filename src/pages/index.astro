@@ -6,6 +6,8 @@ import Header from '../components/header.astro';
 import Button from '../components/Button.astro';
 import Card from '../components/Card.svelte';
 
+import Arrow from '../components/Arrow.svelte'
+
 const cards = [
 	{ title: "3D Printer", body: "yay" ,href: "", 
 		techno: [
@@ -20,17 +22,22 @@ const cards = [
 
 <LayoutPage title="test">
 	<Header title={["Accueil", "Projets", "Contact"]} href={["/", "/projets", "/#contact"]}></Header>
-	<div id="home" class=" flex w-screen h-screen">
+	<div id="home" class=" flex w-full h-screen typo-rubik">
 
-		<div class="  absolute left-[10%] top-[10%]">
-			<h1 class="text-7xl font-medium h-auto w-auto">Mathieu Chavanel</h1>
-			<h2 class="text-5xl">Developpeur Creatif</h2>
-			<p class="text-xl">Description</p>
+		<div class="  absolute left-[10%] top-[30%]">
+			<h1 class="text-7xl font-semibold ">Mathieu Chavanel</h1>
+			<h2 class="text-5xl ">Developpeur Creatif</h2>
+			<p class="text-2xl ">Description</p>
 		</div>
-		<img src="/images/profile.png" alt="image profile" class=" w-[30%] h-auto absolute right-[10%] top-[10%]">
+		
+		<img src="/images/profile.png" alt="image profile" class=" w-[30%] absolute right-[10%] top-[10%]">
 
-		<a href="">arrow</a>
+		<div class="bg-[#BCFFF7]  absolute right-[12%] top-[67%] rounded-[10px] -rotate-[5deg]">
+			<p class="font-normal text-[30px] py-[8px] px-[16px] ">A la recherche d'une alternance</p>
+		</div>
 
+		<!-- <a href="" class=" absolute bottom-[10%] left-1/2">arrow</a> -->
+		<Arrow client:only="svelte" class:list={["absolute bottom-[10%] left-1/2"]}/>
 	</div>
 
 	<div id="projectHighlight">
@@ -63,7 +70,7 @@ const cards = [
 
 	}
 
-	*{
+	div{
 		overflow-x: hidden;
 	}
 
