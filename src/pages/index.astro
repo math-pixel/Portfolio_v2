@@ -9,9 +9,9 @@ import Card from '../components/Card.svelte';
 import Arrow from '../components/Arrow.svelte'
 
 const cards = [
-	{ title: "3D Printer", body: "yay" ,href: "", 
+	{ title: "3D Printer", body: "yay" ,href: "", thumbnail : "/images/toto.webp",
 		techno: [
-			{"img" : "path", "name" : "toto"},
+			{"img" : "pathlol", "name" : "toto"},
 			{"img" : "path", "name" : "tutu"}
 		]
 	},
@@ -30,21 +30,26 @@ const cards = [
 			<p class="text-2xl font-thin">Description</p>
 		</div>
 
-		<img src="/images/profile.png" alt="image profile" class=" w-[30%] absolute right-[10%] top-[10%]">
+		
+		
+		<!-- <a href="" class=" absolute bottom-[10%] left-1/2">arrow</a> -->
+		<div class="absolute right-[10%] top-[20%] overflow-visible">
 
-		<div class="bg-[#BCFFF7]  absolute right-[12%] top-[67%] rounded-[10px] -rotate-[5deg]">
-			<p class="font-normal text-[30px] py-[8px] px-[16px] ">A la recherche d'une alternance</p>
+			<img src="/images/profile.png" alt="image profile" class="">
+
+			<div class="bg-[#BCFFF7] absolute left-[0%] top-[80%] rounded-[10px] -rotate-[5deg]">
+				<p class="font-normal text-[30px] py-[8px] px-[16px] whitespace-nowrap">A la recherche d'une alternance</p>
+			</div>
 		</div>
 
-		<!-- <a href="" class=" absolute bottom-[10%] left-1/2">arrow</a> -->
-		 <div class="absolute -bottom-[10%] left-0 w-full flex justify-center">
+		<div class="absolute -bottom-[10%] left-0 w-full flex justify-center">
 			<Arrow client:only="svelte"/>
-		 </div>
+		</div>
 	</div>
 
 	<div id="projectHighlight">
 		{cards.map(currentCard => (
-			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail='' techno={currentCard.techno}></Card>
+			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail={currentCard.thumbnail} techno={currentCard.techno}></Card>
 		))}
 	</div>
 	
