@@ -9,7 +9,19 @@ import Card from '../components/Card.svelte';
 import Arrow from '../components/Arrow.svelte'
 
 const cards = [
-	{ title: "3D Printer", body: "yay" ,href: "", thumbnail : "/images/toto.webp",
+	{ title: "3D Printer", body: "yay" ,href: "", thumbnail : "/images/toto.png",
+		techno: [
+			{"img" : "pathlol", "name" : "toto"},
+			{"img" : "path", "name" : "tutu"}
+		]
+	},
+	{ title: "3D Printer", body: "yay" ,href: "", thumbnail : "/images/toto.png",
+		techno: [
+			{"img" : "pathlol", "name" : "toto"},
+			{"img" : "path", "name" : "tutu"}
+		]
+	},
+	{ title: "3D Printer", body: "yay" ,href: "", thumbnail : "/images/toto.png",
 		techno: [
 			{"img" : "pathlol", "name" : "toto"},
 			{"img" : "path", "name" : "tutu"}
@@ -47,7 +59,7 @@ const cards = [
 		</div>
 	</div>
 
-	<div id="projectHighlight">
+	<div id="projectHighlight" class="overflow-visible flex w-full h-screen typo-rubik flex-wrap justify-around">
 		{cards.map(currentCard => (
 			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail={currentCard.thumbnail} techno={currentCard.techno}></Card>
 		))}

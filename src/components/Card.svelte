@@ -16,12 +16,15 @@ export let techno :PropsComponent['techno'];
 
 </script>
 
-<a href={href} class=" absolute w-[40%] bg-red-400">
-	<img src={thumbnail} alt="" class=" absolute bottom-0 left-0 w-1/3 h-[120%]">
-	<h2 class="">{title}</h2>
-	<p>{description}</p>
-	{#each techno as currentTechno}
-		<p>{currentTechno.img}</p>
-		<h1>{currentTechno.name}</h1>
-    {/each}
+<a href={href} class="relative w-[40%] h-[40%] bg-[#D6ECFF] overflow-visible rounded-[20px]">
+    <img src={thumbnail} alt="" class=" absolute bottom-[12px] left-[12px] h-[105%] rounded-[10px]">
+    <h2 class="absolute top-[10%] left-[35%] font-semibold text-4xl">{title}</h2>
+    <p class="absolute top-[20%] left-[35%] font-normal text-lg ">{description}</p>
+
+    <div class=" absolute bottom-0 right-0 bg-slate-500 w-[40%] h-[20%] flex">
+        {#each techno as currentTechno}
+            <p>{currentTechno.img}</p>
+            <h1>{currentTechno.name}</h1>
+        {/each}
+    </div>
 </a >
