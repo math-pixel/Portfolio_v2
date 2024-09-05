@@ -23,9 +23,11 @@ export let techno :PropsComponent['techno'];
     <h2 class="absolute top-[10%] left-[40%] font-semibold text-4xl">{title}</h2>
     <p class="absolute top-[20%] left-[40%] font-normal text-lg ">{description}</p>
 
-    <div class=" absolute -bottom-[5%] right-[5%] w-[40%] h-[20%] flex justify-around items-center">
-        {#each techno as currentTechno}
-            <img alt="" src={currentTechno.img} class="w-[20%]"/>
+    <div class=" absolute -bottom-[5%] right-[5%] w-[40%] h-[20%] flex justify-around items-center overflow-visible">
+        {#each techno as currentTechno, index}
+            {#if index < 3}
+                <img alt="image" src={currentTechno.img} class="w-[35%]"/>
+            {/if}
         {/each}
     </div>
 </a >
