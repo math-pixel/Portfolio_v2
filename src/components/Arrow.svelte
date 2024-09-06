@@ -9,8 +9,8 @@
   controls={false}
   renderer='svg'
   background='transparent'
-  height={500}
-  width={500}
+  height={300}
+  width={300}
     />
   <!-- controlsLayout={[
 		"previousFrame",

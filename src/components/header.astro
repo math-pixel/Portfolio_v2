@@ -7,9 +7,9 @@ interface Props {
 const { href, title } = Astro.props;
 ---
 
-<ul class=" sticky inset-x-0 top-4 z-50 global-color flex justify-around w-1/4 rounded-full mx-auto my-5 font-semibold text-2xl drop-shadow-lg">
+<ul class=" sticky inset-x-0 top-4 z-50 global-color flex justify-around w-1/4 rounded-full mx-auto my-5 font-semibold text-2xl drop-shadow-sm">
 	{title.map((item, index) => (
-        <a href={href[index]} class="  m-4">{item}</a>
+        <a href={href[index]} class=" m-4">{item}</a>
     ))}
 </ul>
 

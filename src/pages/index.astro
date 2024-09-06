@@ -9,13 +9,20 @@ import Card from '../components/Card.svelte';
 import Arrow from '../components/Arrow.svelte'
 
 const cards = [
-	{ title: "3D Printer", body: "yay" ,href: "", thumbnail : "/images/toto.png",
+	{ title: "Arcania", body: "Dans Arcania transformer votre telephone en veritable baguette magique et combattez vos amies dans l'arene" ,href: "https://github.com/math-pixel/ARCANIA", thumbnail : "/images/masarus.png",
+		techno: [
+			{"img" : "https://skillicons.dev/icons?i=p5js"},
+			{"img" : "https://skillicons.dev/icons?i=nodejs"},
+			{"img" : "https://skillicons.dev/icons?i=html"}
+		]
+	},
+	{ title: "Masaru's Adventure", body: "Aidez Masarus à retrouver le shamizen sacré pour sauvez l'île de Kyushu. " ,href: "https://github.com/math-pixel/Masarus-Adventure", thumbnail : "/images/masarus.png",
 		techno: [
 			{"img" : "/images/profile.png"},
 			{"img" : "/images/profile.png"}
 		]
 	},
-	{ title: "3D Printer", body: "yay" ,href: "", thumbnail : "/images/toto.png",
+	{ title: "Imprimante 3D", body: "En quêtes de savoir, j'ai voulue construire moi meme une imprimante 3D pour connaitre les moindres details de ces machines" ,href: "", thumbnail : "/images/toto.png",
 		techno: [
 			{"img" : "/images/profile.png"},
 			{"img" : "/images/profile.png"},
@@ -23,7 +30,7 @@ const cards = [
 			{"img" : "/images/profile.png"}
 		]
 	},
-	{ title: "3D Printer", body: "yay" ,href: "", thumbnail : "/images/toto.png",
+	{ title: "Reveil Intelligent", body: "Allo Jarvis ? Reveil 8H demain ! Un reveil fabriquer en python booster a l'ia et structure grace a de la POO " ,href: "", thumbnail : "/images/toto.png",
 		techno: [
 			{"img" : "/images/profile.png"},
 			{"img" : "/images/profile.png"},
@@ -39,15 +46,16 @@ const cards = [
 	<Header title={["Accueil", "Projets", "Contact"]} href={["/", "/#projectHighlight", "/#contact"]}></Header>
 	<div id="home" class=" flex w-full h-screen typo-rubik">
 
-		<div class="  absolute left-[10%] top-[30%] flex flex-col">
+		<div class="  absolute left-[5%] top-[30%] flex flex-col overflow-visible">
 			<h1 class="text-7xl font-semibold ">Mathieu Chavanel</h1>
 			<h2 class="text-5xl font-light">Developpeur Creatif</h2>
-			<p class="text-2xl font-thin mt-8 max-w-[60%]">
-				Salut ! Je suis un développeur passionné et curieux sur le monde qui m'entoure. J'adore me lancer des nouveaux défis & apprendre de nouvelle compétences !
-				Et quand je ne code pas, vous me trouverez probablement en train de faire du sport ou de bricoler sur un projet.
+			<p class="text-2xl font-thin mt-8 max-w-[76%]">
+				Salut ! Je suis un développeur passionné et surtout curieux sur le monde qui nous entoure. 
+				<br>J'adore me lancer des nouveaux défis et apprendre de nouvelle compétences !
+				<br>Et quand je ne code pas, vous me trouverez probablement en train de faire du sport, de bricoler ou de jouer au dernier jeu vidéo !
 				<br>
 				<br>
-				Pour me résumer en 3 mots : Curieux, Manuel, Persévérant
+				Pour me résumer en 3 mots : <mark class=" bg-[#FFF8D6] px-[10px] py-[4px] rounded-lg "><b>Curieux</b></mark> <mark class=" bg-[#E3FFD6] px-[10px] py-[4px] rounded-lg "><b>Manuel</b></mark> <mark class=" bg-[#F4D6FF] px-[10px] py-[4px] rounded-lg "><b>Persévérant</b></mark>
 			</p>
 		</div>
 		
@@ -55,9 +63,9 @@ const cards = [
 		<!-- <a href="" class=" absolute bottom-[10%] left-1/2">arrow</a> -->
 		<div class="absolute right-[10%] top-[20%] overflow-visible">
 
-			<img src="/images/avatar.png" alt="image profile" class="">
+			<img src="/images/avatar.png" alt="image profile" class=" w-[450px]">
 
-			<div class="bg-[#BCFFF7] absolute -left-[10%] top-[85%] rounded-[10px] -rotate-[7deg]">
+			<div class="bg-[#BCFFF7] absolute left-[5%] top-[80%] rounded-[10px] -rotate-[7deg] ">
 				<p class="font-normal text-[30px] py-[8px] px-[16px] whitespace-nowrap">A la recherche d'une alternance</p>
 			</div>
 		</div>
