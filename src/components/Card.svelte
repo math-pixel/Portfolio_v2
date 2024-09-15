@@ -26,7 +26,7 @@ export let techno :PropsComponent['techno'];
     <div class=" absolute -bottom-[5%] right-[5%] w-[40%] h-[20%] flex justify-around items-center overflow-visible">
         {#each techno as currentTechno, index}
             {#if index < 3}
-                <img alt="image" src={currentTechno.img} class="w-[25%]"/>
+                <img alt="of techno" src={currentTechno.img} class="w-[25%]"/>
             {/if}
         {/each}
     </div>

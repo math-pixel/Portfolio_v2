@@ -8,6 +8,8 @@ import Card from '../components/Card.svelte';
 
 import Arrow from '../components/Arrow.svelte'
 
+import CursorFollower from '../components/CursorFollower.svelte'
+
 const cards = [
 	{ title: "Arcania", body: "Dans Arcania transformer votre telephone en veritable baguette magique et combattez vos amies dans l'arene" ,href: "https://github.com/math-pixel/ARCANIA", thumbnail : "/images/masarus.png",
 		techno: [
@@ -43,6 +45,7 @@ const cards = [
 ---
 
 <LayoutPage title="Mathieu Chavanel - Portfolio">
+	<CursorFollower client:load></CursorFollower>
 	<Header title={["Accueil", "Projets", "Contact"]} href={["/", "/#projectHighlight", "/#contact"]}></Header>
 	<div id="home" class=" flex w-full h-screen ">
 
@@ -61,7 +64,7 @@ const cards = [
 		
 		
 		<!-- <a href="" class=" absolute bottom-[10%] left-1/2">arrow</a> -->
-		<div class="absolute right-[5%] top-[20%] overflow-visible shape-outside">
+		<div class="absolute right-[5%] top-[20%] overflow-visible">
 
 			<img src="/images/avatar.png" alt="image profile" class=" w-[450px]">
 
@@ -126,7 +129,7 @@ const cards = [
 	@layer base{
 		@font-face {
 			font-family: 'RubikFont';
-			src: url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+			src: url("");
 		}
 	}
 
@@ -135,8 +138,8 @@ const cards = [
 			background-color: #CFE9FF;
 		}
 
-		.shape-outside{
-			shape-outside: circle();
+		.text-hover{
+			text-shadow: 0px 0px 1px black;
 		}
 
 	}
