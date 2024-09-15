@@ -44,12 +44,12 @@ const cards = [
 
 <LayoutPage title="Mathieu Chavanel - Portfolio">
 	<Header title={["Accueil", "Projets", "Contact"]} href={["/", "/#projectHighlight", "/#contact"]}></Header>
-	<div id="home" class=" flex w-full h-screen typo-rubik">
+	<div id="home" class=" flex w-full h-screen ">
 
 		<div class="  absolute left-[5%] top-[30%] flex flex-col overflow-visible">
 			<h1 class="text-7xl font-semibold ">Mathieu Chavanel</h1>
 			<h2 class="text-5xl font-light">Developpeur Creatif</h2>
-			<p class="text-2xl font-thin mt-8 max-w-[76%]">
+			<p class="text-2xl font-thin mt-8 max-w-[68%]">
 				Salut ! Je suis un développeur passionné et surtout curieux sur le monde qui nous entoure. 
 				<br>J'adore me lancer des nouveaux défis et apprendre de nouvelle compétences !
 				<br>Et quand je ne code pas, vous me trouverez probablement en train de faire du sport, de bricoler ou de jouer au dernier jeu vidéo !
@@ -61,7 +61,7 @@ const cards = [
 		
 		
 		<!-- <a href="" class=" absolute bottom-[10%] left-1/2">arrow</a> -->
-		<div class="absolute right-[10%] top-[20%] overflow-visible">
+		<div class="absolute right-[5%] top-[20%] overflow-visible shape-outside">
 
 			<img src="/images/avatar.png" alt="image profile" class=" w-[450px]">
 
@@ -77,7 +77,7 @@ const cards = [
 
 	<h1 class=" w-full my-[5%] font-black text-6xl text-center">Projets à la une !</h1>
 	
-	<div id="projectHighlight" class="overflow-visible flex w-full h-screen typo-rubik flex-wrap justify-around">
+	<div id="projectHighlight" class="overflow-visible flex w-full h-screen  flex-wrap justify-around">
 		
 		{cards.map(currentCard => (
 			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail={currentCard.thumbnail} techno={currentCard.techno}></Card>
@@ -86,7 +86,7 @@ const cards = [
 
 	<h1 class=" w-full my-[5%] font-black text-6xl text-center">Contact</h1>
 	
-	<div id="contact" class="overflow-visible w-full h-screen typo-rubik relative">
+	<div id="contact" class="overflow-visible w-full h-screen  relative">
 
 		<div class=" w-[40%] ml-[40%] h-full flex flex-col justify-center overflow-visible">
 			
@@ -123,12 +123,20 @@ const cards = [
 	@tailwind components;
 	@tailwind utilities;
 
-	@layer components {
-		.typo-rubik {
-			font-family: 'Rubik';
+	@layer base{
+		@font-face {
+			font-family: 'RubikFont';
+			src: url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 		}
+	}
+
+	@layer components {
 		.global-color{
 			background-color: #CFE9FF;
+		}
+
+		.shape-outside{
+			shape-outside: circle();
 		}
 
 	}
