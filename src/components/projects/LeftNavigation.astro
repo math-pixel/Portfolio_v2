@@ -6,7 +6,7 @@ const { headings, title = "Table of Contents" } = Astro.props;
 <nav class="fixed left-0 top-0 w-64 h-screen overflow-y-auto bg-gradient-to-b from-purple-900 to-indigo-900 p-6 shadow-lg transition-all duration-300 ease-in-out">
   <h2 class="text-2xl font-bold text-white mb-6">{title}</h2>
   <ul class="space-y-2">
-    {headings.map((heading) => (
+    {headings.map((heading: any) => (
       <li class={`transition-all duration-200 ease-in-out hover:bg-purple-700 rounded depth-${heading.depth}`}>
         <a
           href={`#${heading.slug}`}
@@ -36,7 +36,7 @@ const { headings, title = "Table of Contents" } = Astro.props;
 </style>
 
 <script>
-  function scrollToHeading(slug) {
+  function scrollToHeading(slug: any) {
     const element = document.getElementById(slug);
     if (element) {
       const topOffset = element.getBoundingClientRect().top + window.pageYOffset - 256;
@@ -48,7 +48,7 @@ const { headings, title = "Table of Contents" } = Astro.props;
   }
 
   document.querySelectorAll('[data-heading-link]').forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', (e: any) => {
       e.preventDefault();
       const slug = e.currentTarget.getAttribute('href').slice(1);
       scrollToHeading(slug);

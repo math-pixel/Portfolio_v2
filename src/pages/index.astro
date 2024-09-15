@@ -1,50 +1,10 @@
 ---
 import LayoutPage from '../layouts/page.astro';
-import LayoutProject from '../layouts/projectLayout.astro';
 
 import Header from '../components/Header.vue';
 import Contact from '../components/Contact.vue';
-import Button from '../components/Button.astro';
-import Card from '../components/Card.vue';
-
-import Arrow from '../components/Arrow.svelte'
-
-import CursorFollower from '../components/CursorFollower.svelte'
 import Hero from '../components/Hero.vue';
 import Projects from '../components/Projects.vue';
-
-const cards = [
-	{ title: "Arcania", body: "Dans Arcania transformer votre telephone en veritable baguette magique et combattez vos amies dans l'arene" ,href: "https://github.com/math-pixel/ARCANIA", thumbnail : "/images/masarus.png",
-		techno: [
-			{"img" : "https://skillicons.dev/icons?i=p5js"},
-			{"img" : "https://skillicons.dev/icons?i=nodejs"},
-			{"img" : "https://skillicons.dev/icons?i=html"}
-		]
-	},
-	{ title: "Masaru's Adventure", body: "Aidez Masarus à retrouver le shamizen sacré pour sauvez l'île de Kyushu. " ,href: "https://github.com/math-pixel/Masarus-Adventure", thumbnail : "/images/masarus.png",
-		techno: [
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"}
-		]
-	},
-	{ title: "Imprimante 3D", body: "En quêtes de savoir, j'ai voulue construire moi meme une imprimante 3D pour connaitre les moindres details de ces machines" ,href: "", thumbnail : "/images/toto.png",
-		techno: [
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"}
-		]
-	},
-	{ title: "Reveil Intelligent", body: "Allo Jarvis ? Reveil 8H demain ! Un reveil fabriquer en python booster a l'ia et structure grace a de la POO " ,href: "", thumbnail : "/images/toto.png",
-		techno: [
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"}
-		]
-	},
-	// { title: "2D Printer", body: "yey" ,href: "" },
-	// { title: "1D Printer", body: "null" ,href: "" }
-]
 ---
 
 <LayoutPage title="Mathieu Chavanel - Portfolio">
