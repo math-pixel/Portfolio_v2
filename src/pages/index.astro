@@ -78,9 +78,9 @@ const cards = [
 		</div>
 	</div>
 
-	<h1 class=" w-full my-[5%] font-black text-6xl text-center">Projets à la une !</h1>
+	<h1 id="projectHighlight" class=" w-full my-[5%] font-black text-6xl text-center">Projets à la une !</h1>
 	
-	<div id="projectHighlight" class="overflow-visible flex w-full h-screen  flex-wrap justify-around">
+	<div class="overflow-visible flex w-full h-screen  flex-wrap justify-around">
 		
 		{cards.map(currentCard => (
 			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail={currentCard.thumbnail} techno={currentCard.techno}></Card>
@@ -111,7 +111,7 @@ const cards = [
 		</div>
 
 		<img src="/images/toto.png" alt="" class="w-[20%] absolute top-[2%] left-[8%] rounded-[16px]">
-		<img src="/images/toto.png" alt="" class="w-[20%] absolute bottom-[2%] right-[8%] rounded-[16px]">
+		<img src="/images/photographie.png" alt="" class="w-[20%] absolute bottom-[2%] right-[8%] rounded-[16px]">
 
 	</div>
 
@@ -120,6 +120,10 @@ const cards = [
 <style is:global>
 	@view-transition {
 	  navigation: auto; /* enabled! */
+	}
+
+	html{
+		scroll-behavior: smooth;
 	}
 
 	@tailwind base;
