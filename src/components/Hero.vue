@@ -34,7 +34,7 @@
             <div
               class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full animate-pulse overflow-visible">
             </div>
-            <img class="relative rounded-full w-full h-full object-cover shadow-2xl opacity-70"
+            <img class="relative rounded-full w-full h-full object-cover shadow-sm opacity-70"
               src="/images/photographie.png" alt="John Doe" />
           </div>
         </div>
