@@ -1,9 +1,9 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+  <div class="min-h-screen flex items-center pt-20 lg:pt-0 justify-center px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl w-full space-y-8">
       <div class="flex flex-col lg:flex-row items-center justify-between">
         <!-- Text Content -->
-        <div class="lg:w-1/2 space-y-6  ml-16  text-center lg:text-left">
+        <div class="lg:w-1/2 space-y-6  lg:ml-16  text-center lg:text-left">
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white">
             <span class="block">Mathieu Chavanel</span>
             <span
@@ -29,10 +29,10 @@
         </div>
 
         <!-- Image -->
-        <div class="lg:w-1/2 mt-10 mr-16 lg:mt-0 flex justify-center lg:justify-end">
+        <div class="lg:w-1/2 mt-10 lg:mr-16 lg:mt-0 flex justify-center lg:justify-end">
           <div class="relative w-72 h-72 sm:w-96 sm:h-96">
             <div
-              class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full animate-pulse  overflow-visible">
+              class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full animate-pulse overflow-visible">
             </div>
             <img class="relative rounded-full w-full h-full object-cover shadow-2xl opacity-70"
               src="/images/photographie.png" alt="John Doe" />

@@ -6,7 +6,7 @@
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div v-for="card in cards" :key="card.title"
-          class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl group">
+          class="bg-gray-800 flex flex-col rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl group">
           <div class="relative overflow-hidden">
             <img :src="card.thumbnail" :alt="card.title"
               class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
@@ -18,9 +18,9 @@
               </a>
             </div>
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-grow">
             <h3 class="text-xl font-semibold text-white mb-2">{{ card.title }}</h3>
-            <p class="text-gray-400 mb-4">{{ card.body }}</p>
+            <p class="text-gray-400 mb-4 flex-grow">{{ card.body }}</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <img v-for="(tech, index) in card.techno" :key="index" :src="tech.img" :alt="tech.img" class="h-6 w-6" />
             </div>
