@@ -1,0 +1,57 @@
+---
+// File: src/components/EnhancedLeftNavigation.astro
+const { headings, title = "Table of Contents" } = Astro.props;
+---
+
+<nav class="fixed left-0 top-0 w-64 h-screen overflow-y-auto bg-gradient-to-b from-purple-900 to-indigo-900 p-6 shadow-lg transition-all duration-300 ease-in-out">
+  <h2 class="text-2xl font-bold text-white mb-6">{title}</h2>
+  <ul class="space-y-2">
+    {headings.map((heading: any) => (
+      <li class={`transition-all duration-200 ease-in-out hover:bg-purple-700 rounded depth-${heading.depth}`}>
+        <a
+          href={`#${heading.slug}`}
+          class="block py-2 px-3 text-gray-300 hover:text-white transition-colors duration-200"
+          data-heading-link
+        >
+          {heading.text}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .depth-1 { @apply border-l border-purple-500; }
+  .depth-2 { @apply border-l border-purple-400 ml-2; }
+  .depth-3 { @apply border-l border-purple-300 ml-4; }
+  .depth-4 { @apply border-l border-purple-200 ml-6; }
+  .depth-5 { @apply border-l border-purple-100 ml-8; }
+  .depth-6 { @apply border-l border-purple-50 ml-10; }
+
+  @media (max-width: 768px) {
+    nav {
+      @apply fixed top-0 left-0 w-full h-auto;
+    }
+  }
+</style>
+
+<script>
+  function scrollToHeading(slug: any) {
+    const element = document.getElementById(slug);
+    if (element) {
+      const topOffset = element.getBoundingClientRect().top + window.pageYOffset - 256;
+      window.scrollTo({
+        top: topOffset,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  document.querySelectorAll('[data-heading-link]').forEach(link => {
+    link.addEventListener('click', (e: any) => {
+      e.preventDefault();
+      const slug = e.currentTarget.getAttribute('href').slice(1);
+      scrollToHeading(slug);
+    });
+  });
+</script>

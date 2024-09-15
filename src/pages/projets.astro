@@ -1,11 +1,13 @@
 ---
 import LayoutPage from '../layouts/page.astro';
-import Header from '../components/header.astro';
+import Header from '../components/Header.vue';
 ---
 
 <LayoutPage title="Mathieu Chavanel.B - Potfolio">
-	<Header title={["Accueil", "Projets", "Labs", "Contact"]} href={["/", "/projets", "/#labs", "/#contact"]}></Header>
-    <h1>Welcome to Projets</h1>
+	<Header></Header>
+	<div class="pt-16 min-h-screen bg-gradient-to-br from-purple-800 to-indigo-900">
+		<h1>Welcome to Projets</h1>
+	</div>
 </LayoutPage>
 
 <style>

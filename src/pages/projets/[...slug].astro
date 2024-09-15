@@ -1,0 +1,243 @@
+---
+import { getCollection } from 'astro:content';
+import Header from '../../components/Header.vue';
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const projectsCollection = await getCollection('projects');
+  return projectsCollection.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const headings = extractHeadings(entry.body);
+
+onMount(()=>{
+  console.warn(headings)
+})
+
+import ProjectLayout from '../../layouts/projectLayout.astro'
+import { extractHeadings } from '../../../utils/extractHeading';
+import LeftNavigation from '../../components/projects/LeftNavigation.astro';
+import { onMount } from 'svelte';
+---
+
+<ProjectLayout title={entry.data.title} props={entry}>
+	<Header></Header>
+  <div class="pt-16 min-h-screen bg-gradient-to-br from-purple-800 to-indigo-900">
+    <LeftNavigation headings={headings}></LeftNavigation>
+    <div class="ml-32">
+      <div class="mdx-content">
+        <Content />
+      </div>
+
+    </div>
+  </div>
+</ProjectLayout>
+
+
+<style is:global>
+
+body{
+  scroll-behavior: smooth;
+}
+  /* Base styles */
+.mdx-content {
+  color: #e2e8f0; /* text-gray-300 */
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Headings */
+.mdx-content h1,
+.mdx-content h2,
+.mdx-content h3,
+.mdx-content h4,
+.mdx-content h5,
+.mdx-content h6 {
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.mdx-content h1 {
+  font-size: 2.5rem;
+}
+
+.mdx-content h2 {
+  font-size: 2rem;
+}
+
+.mdx-content h3 {
+  font-size: 1.75rem;
+}
+
+.mdx-content h4 {
+  font-size: 1.5rem;
+}
+
+.mdx-content h5 {
+  font-size: 1.25rem;
+}
+
+.mdx-content h6 {
+  font-size: 1rem;
+}
+
+/* Paragraphs */
+.mdx-content p {
+  margin-bottom: 1.5em;
+}
+
+/* Links */
+.mdx-content a {
+  color: #d6bcfa; /* text-purple-300 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mdx-content a:hover {
+  color: #9f7aea; /* text-purple-400 */
+  text-decoration: underline;
+}
+
+/* Lists */
+.mdx-content ul,
+.mdx-content ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+.mdx-content li {
+  margin-bottom: 0.5em;
+}
+
+/* Blockquotes */
+.mdx-content blockquote {
+  border-left: 4px solid #9f7aea; /* border-purple-400 */
+  margin-left: 0;
+  padding-left: 1em;
+  font-style: italic;
+  color: #a0aec0; /* text-gray-400 */
+}
+
+/* Code blocks */
+.mdx-content pre {
+  background-color: #2d3748; /* bg-gray-800 */
+  border-radius: 0.375rem;
+  padding: 1em;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+}
+
+.mdx-content code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875em;
+  background-color: #4a5568; /* bg-gray-700 */
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+.mdx-content p code,
+.mdx-content li code {
+  background-color: #4a5568; /* bg-gray-700 */
+  color: #e2e8f0; /* text-gray-300 */
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+}
+
+/* Tables */
+.mdx-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+.mdx-content th,
+.mdx-content td {
+  border: 1px solid #4a5568; /* border-gray-700 */
+  padding: 0.5em;
+  text-align: left;
+}
+
+.mdx-content th {
+  background-color: #2d3748; /* bg-gray-800 */
+  font-weight: 700;
+}
+
+/* Horizontal rule */
+.mdx-content hr {
+  border: 0;
+  border-top: 1px solid #4a5568; /* border-gray-700 */
+  margin: 2em 0;
+}
+
+/* Images */
+.mdx-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+  margin-bottom: 1.5em;
+}
+
+/* Custom classes for callouts or special sections */
+.mdx-content .note,
+.mdx-content .warning,
+.mdx-content .tip {
+  border-left: 4px solid;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  border-radius: 0.375rem;
+}
+
+.mdx-content .note {
+  background-color: rgba(66, 153, 225, 0.1); /* bg-blue-900 with opacity */
+  border-color: #4299e1; /* border-blue-500 */
+}
+
+.mdx-content .warning {
+  background-color: rgba(236, 201, 75, 0.1); /* bg-yellow-900 with opacity */
+  border-color: #ecc94b; /* border-yellow-500 */
+}
+
+.mdx-content .tip {
+  background-color: rgba(72, 187, 120, 0.1); /* bg-green-900 with opacity */
+  border-color: #48bb78; /* border-green-500 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .mdx-content {
+    padding: 1rem 0.5rem;
+  }
+
+  .mdx-content h1 {
+    font-size: 2rem;
+  }
+
+  .mdx-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .mdx-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .mdx-content h4 {
+    font-size: 1.25rem;
+  }
+
+  .mdx-content h5,
+  .mdx-content h6 {
+    font-size: 1rem;
+  }
+}
+</style>

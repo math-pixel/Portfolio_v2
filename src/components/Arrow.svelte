@@ -1,4 +1,5 @@
 <script>
+	// Soo, I'm gonna keep this svelte file for the lol but ok
     import { LottiePlayer } from '@lottiefiles/svelte-lottie-player';
 </script>
 
