@@ -11,34 +11,44 @@ import Arrow from '../components/Arrow.svelte'
 import CursorFollower from '../components/CursorFollower.svelte'
 
 const cards = [
-	{ title: "Arcania", body: "Dans Arcania transformer votre telephone en veritable baguette magique et combattez vos amies dans l'arene" ,href: "https://github.com/math-pixel/ARCANIA", thumbnail : "/images/masarus.png",
+	{ title: "Arcania", body: "Dans Arcania transformer votre telephone en veritable baguette magique et combattez vos amies dans l'arene" ,href: "https://github.com/math-pixel/ARCANIA", thumbnail : "/images/arcania.png",
 		techno: [
-			{"img" : "https://skillicons.dev/icons?i=p5js"},
-			{"img" : "https://skillicons.dev/icons?i=nodejs"},
-			{"img" : "https://skillicons.dev/icons?i=html"}
+			{"img" : "/images/languages/html.png"},
+			{"img" : "/images/languages/p5.png"},
+			{"img" : "/images/languages/nodejs.png"},
+			{"img" : "/images/languages/socketio.png"},
 		]
 	},
 	{ title: "Masaru's Adventure", body: "Aidez Masarus à retrouver le shamizen sacré pour sauvez l'île de Kyushu. " ,href: "https://github.com/math-pixel/Masarus-Adventure", thumbnail : "/images/masarus.png",
 		techno: [
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"}
+			{"img" : "/images/languages/html.png"},
+			{"img" : "/images/languages/p5.png"},
+			{"img" : "/images/languages/js.png"},
+			{"img" : "/images/languages/css.png"}
 		]
 	},
 	{ title: "Imprimante 3D", body: "En quêtes de savoir, j'ai voulue construire moi meme une imprimante 3D pour connaitre les moindres details de ces machines" ,href: "", thumbnail : "/images/toto.png",
 		techno: [
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"}
+			{"img" : "/images/languages/rpi.png"},
+			{"img" : "/images/languages/octo.png"},
+			{"img" : "/images/languages/ia.png"},
+			{"img" : "/images/languages/tool.png"},
 		]
 	},
 	{ title: "Reveil Intelligent", body: "Allo Jarvis ? Reveil 8H demain ! Un reveil fabriquer en python booster a l'ia et structure grace a de la POO " ,href: "", thumbnail : "/images/toto.png",
 		techno: [
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"},
-			{"img" : "/images/profile.png"}
+			{"img" : "/images/languages/rpi.png"},
+			{"img" : "/images/languages/python.png"},
+			{"img" : "/images/languages/ia.png"}
 		]
-	},
+	},{ title: "Photo Party", body: "3, 2, 1, cheeez ! Photo Party est une application de soiree pour partager ses photos \n Le principe est simple. Tu prend une photos sur ton telephone via une app web puis tu admires ta photos et celle de tes amis sur le video projecteur de la soiree ! " ,href: "", thumbnail : "/images/toto.png",
+		techno: [
+			{"img" : "/images/languages/html.png"},
+			{"img" : "/images/languages/nodejs.png"},
+			{"img" : "/images/languages/socketio.png"},
+			{"img" : "/images/languages/sql.svg"},
+		]
+	}
 	// { title: "2D Printer", body: "yey" ,href: "" },
 	// { title: "1D Printer", body: "null" ,href: "" }
 ]
@@ -80,7 +90,7 @@ const cards = [
 
 	<h1 id="projectHighlight" class=" w-full my-[5%] font-black text-6xl text-center">Projets à la une !</h1>
 	
-	<div class="overflow-visible flex w-full h-screen  flex-wrap justify-around">
+	<div class="overflow-visible flex w-full flex-wrap justify-around">
 		
 		{cards.map(currentCard => (
 			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail={currentCard.thumbnail} techno={currentCard.techno}></Card>
