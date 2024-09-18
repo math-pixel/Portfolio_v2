@@ -27,7 +27,7 @@ const cards = [
 			{"img" : "/images/languages/css.png"}
 		]
 	},
-	{ title: "Imprimante 3D", body: "En quêtes de savoir, j'ai voulue construire moi meme une imprimante 3D pour connaitre les moindres details de ces machines" ,href: "", thumbnail : "/images/toto.png",
+	{ title: "Imprimante 3D", body: "En quêtes de savoir, j'ai voulue construire moi meme une imprimante 3D pour connaitre les moindres details de ces machines" ,href: "", thumbnail : "/images/3dprint.png",
 		techno: [
 			{"img" : "/images/languages/rpi.png"},
 			{"img" : "/images/languages/octo.png"},
@@ -35,13 +35,13 @@ const cards = [
 			{"img" : "/images/languages/tool.png"},
 		]
 	},
-	{ title: "Reveil Intelligent", body: "Allo Jarvis ? Reveil 8H demain ! Un reveil fabriquer en python booster a l'ia et structure grace a de la POO " ,href: "", thumbnail : "/images/toto.png",
+	{ title: "Reveil Intelligent", body: "Allo Jarvis ? Reveil 8H demain ! Un reveil fabriquer en python booster a l'ia et structure grace a de la POO " ,href: "", thumbnail : "/images/clock.png",
 		techno: [
 			{"img" : "/images/languages/rpi.png"},
 			{"img" : "/images/languages/python.png"},
 			{"img" : "/images/languages/ia.png"}
 		]
-	},{ title: "Photo Party", body: "3, 2, 1, cheeez ! Photo Party est une application de soiree pour partager ses photos \n Le principe est simple. Tu prend une photos sur ton telephone via une app web puis tu admires ta photos et celle de tes amis sur le video projecteur de la soiree ! " ,href: "", thumbnail : "/images/toto.png",
+	},{ title: "Photo Party", body: "Cheeez ! Photo Party est une application de soiree pour partager ses photos \n Le principe est simple. Tu prend une photos sur ton telephone via une app web puis tu admires ta photos et celle de tes amis sur le video projecteur de la soiree ! " ,href: "", thumbnail : "/images/photo party.png",
 		techno: [
 			{"img" : "/images/languages/html.png"},
 			{"img" : "/images/languages/nodejs.png"},
@@ -90,7 +90,7 @@ const cards = [
 
 	<h1 id="projectHighlight" class=" w-full my-[5%] font-black text-6xl text-center">Projets à la une !</h1>
 	
-	<div class="overflow-visible flex w-full flex-wrap justify-around">
+	<div class="overflow-visible flex w-full flex-wrap justify-center">
 		
 		{cards.map(currentCard => (
 			<Card title={currentCard.title} description={currentCard.body} href={currentCard.href} thumbnail={currentCard.thumbnail} techno={currentCard.techno}></Card>
@@ -149,7 +149,7 @@ const cards = [
 
 	@layer components {
 		.global-color{
-			background-color: #CFE9FF;
+			background-color: #f7f5f2;
 		}
 
 		.text-hover{
