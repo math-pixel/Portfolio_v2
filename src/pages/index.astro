@@ -52,9 +52,10 @@ const cards = [
 	// { title: "2D Printer", body: "yey" ,href: "" },
 	// { title: "1D Printer", body: "null" ,href: "" }
 ]
----
 
-<LayoutPage title="Mathieu Chavanel - Portfolio">
+let atTop = true
+---
+<LayoutPage title="Mathieu Chavanel - Portfolio" @scroll.window = "alert('tutu')">
 	<CursorFollower client:load></CursorFollower>
 	<Header title={["Accueil", "Projets", "Contact"]} href={["/", "/#projectHighlight", "/#contact"]}></Header>
 	<div id="home" class=" flex w-full h-screen ">
@@ -76,7 +77,7 @@ const cards = [
 		<!-- <a href="" class=" absolute bottom-[10%] left-1/2">arrow</a> -->
 		<div class="absolute right-[5%] top-[20%] overflow-visible">
 
-			<img src="/images/avatar.png" alt="image profile" class=" w-[450px]">
+			<img src="/images/prof.png" alt="image profile" class=" object-cover rounded-[100%] w-[450px]">
 
 			<div class="bg-[#BCFFF7] absolute left-[5%] top-[80%] rounded-[10px] -rotate-[7deg] ">
 				<p class="font-normal text-[30px] py-[8px] px-[16px] whitespace-nowrap">A la recherche d'une alternance</p>
