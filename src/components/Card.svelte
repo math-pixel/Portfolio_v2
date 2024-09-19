@@ -16,7 +16,7 @@ export let techno :PropsComponent['techno'];
 
 </script>
 
-<a href={href} class="relative  w-[45%] overflow-visible rounded-[20px] p-4 pt-7 m-2 hover:bg-slate-100 ">
+<a href={href} target="_blank" class="relative  w-[45%] overflow-visible rounded-[20px] p-4 pt-7 m-2 hover:bg-slate-100 ">
     
     <div class=" flex w-full h-[45vh] overflow-hidden justify-around">
         <img src={thumbnail} alt="" class=" h-[100%] w-[100%] rounded-[10px] object-cover ">
