@@ -52,10 +52,8 @@ const cards = [
 	// { title: "2D Printer", body: "yey" ,href: "" },
 	// { title: "1D Printer", body: "null" ,href: "" }
 ]
-
-let atTop = true
 ---
-<LayoutPage title="Mathieu Chavanel - Portfolio" @scroll.window = "alert('tutu')">
+<LayoutPage title="Mathieu Chavanel - Portfolio" >
 	<CursorFollower client:load></CursorFollower>
 	<Header title={["Accueil", "Projets", "Contact"]} href={["/", "/#projectHighlight", "/#contact"]}></Header>
 	<div id="home" class=" flex w-full h-screen ">
@@ -154,7 +152,7 @@ let atTop = true
 		}
 
 		.text-hover{
-			text-shadow: 0px 0px 1px black;
+			text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.677);
 		}
 
 	}
