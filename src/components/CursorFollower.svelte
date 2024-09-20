@@ -33,7 +33,7 @@
 </script>
 
 <div 
-class="w-[{800}px] h-[{800}px] bg-[#CFE9FF] blur-3xl opacity-40 absolute top-0 left-0 rounded-full z-[-100]" 
+class="w-[800px] h-[800px] bg-[#CFE9FF] blur-3xl opacity-30 absolute top-0 left-0 rounded-full z-[-100]" 
 style="transform: translate({current.x - (800 / 2)}px, {current.y - (800 / 2)}px);"
 />
 

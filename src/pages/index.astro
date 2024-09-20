@@ -9,6 +9,7 @@ import Card from '../components/Card.svelte';
 import Arrow from '../components/Arrow.svelte'
 
 import CursorFollower from '../components/CursorFollower.svelte'
+import type { idText } from 'typescript';
 
 const cards = [
 	{ title: "Arcania", body: "Dans Arcania transformer votre telephone en veritable baguette magique et combattez vos amies dans l'arene" ,href: "https://github.com/math-pixel/ARCANIA", thumbnail : "/images/arcania.png",
@@ -52,7 +53,7 @@ const cards = [
 ]
 ---
 <LayoutPage title="Mathieu Chavanel - Portfolio" >
-	<CursorFollower client:load></CursorFollower>
+	<CursorFollower client:load ></CursorFollower>
 	<Header title={["Accueil", "Projets", "Contact"]} href={["/", "/#projectHighlight", "/#contact"]}></Header>
 	<div id="home" class=" flex w-full h-screen flex-col-reverse max-md:content-center max-md:h-fit">
 
