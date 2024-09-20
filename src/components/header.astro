@@ -9,7 +9,18 @@ const { href, title } = Astro.props;
 <!-- sticky inset-x-0 top-4 z-50 global-color flex justify-around w-1/3 rounded-full mx-auto my-5 text-2xl drop-shadow-sm -->
 <ul  
 	id="main-header"
-	class=" duration-500 sticky inset-x-0 top-4 z-50 flex justify-around w-1/3 rounded-full mx-auto my-5 text-2xl drop-shadow-sm"
+	class=" 
+	duration-500 
+	z-50
+	sticky 	inset-x-0 
+	flex justify-around top-4
+	w-1/3 
+	rounded-full 
+	mx-auto my-5 
+	text-2xl 
+	drop-shadow-sm 
+
+	max-md:w-screen max-md:m-0 max-md:top-0 max-md:rounded-none"
 	>
 	{title.map((item, index) => (
         <a href={href[index]} class=" m-4 font-medium hover:text-hover">{item}</a>

@@ -54,12 +54,12 @@ const cards = [
 <LayoutPage title="Mathieu Chavanel - Portfolio" >
 	<CursorFollower client:load></CursorFollower>
 	<Header title={["Accueil", "Projets", "Contact"]} href={["/", "/#projectHighlight", "/#contact"]}></Header>
-	<div id="home" class=" flex w-full h-screen ">
+	<div id="home" class=" flex w-full h-screen flex-col-reverse max-md:content-center max-md:h-fit">
 
-		<div class="  absolute left-[5%] top-[30%] flex flex-col overflow-visible">
+		<div class="  absolute left-[5%] top-[30%] flex flex-col overflow-visible max-md:relative max-md:overflow-hidden">
 			<h1 class="text-7xl font-semibold ">Mathieu Chavanel</h1>
 			<h2 class="text-5xl font-light">Developpeur Creatif</h2>
-			<p class="text-2xl font-thin mt-8 max-w-[68%]">
+			<p class="text-2xl font-thin mt-8 max-w-[68%] max-md:max-w-[95%] ">
 				Salut ! Je suis un développeur passionné et surtout curieux sur le monde qui nous entoure. 
 				<br>J'adore me lancer des nouveaux défis et apprendre de nouvelle compétences !
 				<br>Et quand je ne code pas, vous me trouverez probablement en train de faire du sport, de bricoler ou de jouer au dernier jeu vidéo !
@@ -71,16 +71,16 @@ const cards = [
 		
 		
 		<!-- <a href="" class=" absolute bottom-[10%] left-1/2">arrow</a> -->
-		<div class="absolute right-[5%] top-[20%] overflow-visible">
+		<div class="absolute right-[5%] top-[20%] overflow-visible max-md:relative">
 
-			<img src="/images/prof.png" alt="image profile" class=" object-cover rounded-[100%] w-[450px]">
+			<img src="/images/prof.png" alt="image profile" class=" object-cover rounded-[100%] w-[450px] max-md:hidden">
 
-			<div class="bg-[#BCFFF7] absolute left-[5%] top-[80%] rounded-[10px] -rotate-[7deg] ">
-				<p class="font-normal text-[30px] py-[8px] px-[16px] whitespace-nowrap">A la recherche d'une alternance</p>
+			<div class="bg-[#BCFFF7] absolute left-[5%] top-[80%] rounded-[10px] -rotate-[7deg] max-md:hidden">
+				<p class="font-normal text-[30px] py-[8px] px-[16px] whitespace-nowrap max-md:text-[20px]">A la recherche d'une alternance</p>
 			</div>
 		</div>
 
-		<div class="absolute -bottom-[10%] left-0 w-full flex justify-center">
+		<div class="absolute -bottom-[10%] left-0 w-full flex justify-center max-md:hidden">
 			<Arrow client:only="svelte"/>
 		</div>
 	</div>
@@ -96,29 +96,29 @@ const cards = [
 
 	<h1 class=" w-full my-[5%] font-black text-6xl text-center">Contact</h1>
 	
-	<div id="contact" class="overflow-visible w-full h-screen  relative">
+	<div id="contact" class="overflow-visible w-full h-screen  relative max-md:h-fit max-md:overflow-x-hidden">
 
-		<div class=" w-[40%] ml-[40%] h-full flex flex-col justify-center overflow-visible">
+		<div class=" w-[40%] ml-[40%] h-full flex flex-col justify-center overflow-visible max-md:m-0 max-md:w-full max-md:h-fit max-md:mt-20 max-md:ml-[10%]">
 			
-			<a href="https://github.com/math-pixel" class=" flex">
+			<a href="https://github.com/math-pixel" target="_blank" class=" flex">
 				<img alt="icon de github" src="/images/github icon.png" class=" w-[20%]">
 				<h1 class=" m-6 my-auto font-medium text-5xl text-center">GitHub</h1>
 			</a>
 
-			<a href="mailto:mathcb74@gmail.com" class=" flex">
+			<a href="mailto:mathcb74@gmail.com" target="_blank" class=" flex">
 				<img alt="icon de mail" src="/images/mail icon.png" class=" w-[20%]">
 				<h1 class=" m-6  my-auto font-medium text-5xl text-center">Mail</h1>
 			</a>
 
-			<a href="https://www.linkedin.com/in/mathieu-chavanel-50488b251/" class=" flex">
+			<a href="https://www.linkedin.com/in/mathieu-chavanel-50488b251/" target="_blank" class=" flex">
 				<img alt="icon de linkedin" src="/images/linkedin icon.png" class=" w-[20%]">
 				<h1 class=" m-6  my-auto font-medium text-5xl text-center">Linkedin</h1>
 			</a>
 
 		</div>
 
-		<img src="/images/toto.png" alt="" class="w-[20%] absolute top-[2%] left-[8%] rounded-[16px]">
-		<img src="/images/photographie.png" alt="" class="w-[20%] absolute bottom-[2%] right-[8%] rounded-[16px]">
+		<img src="/images/toto.png" alt="" class="w-[20%] absolute top-[2%] left-[8%] rounded-[16px] max-md:hidden">
+		<img src="/images/photographie.png" alt="" class="w-[20%] absolute bottom-[2%] right-[8%] rounded-[16px] max-md:hidden">
 
 	</div>
 
